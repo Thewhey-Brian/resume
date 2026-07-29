@@ -35,8 +35,11 @@ echo "  $DIST/$NAME.docx"
 REVIEW_DIR="${CV_OUT:-$HOME/Downloads/Xinyu_CV}"
 REVIEW_NAME="${CV_REVIEW_NAME:-Xinyu_Guo_Anthropic_LifeSci}"
 if [ -d "$REVIEW_DIR" ]; then
-  if [ -e "$REVIEW_DIR/~\$${REVIEW_NAME#?}.docx" ]; then
-    echo "  ⚠︎ $REVIEW_NAME.docx is open in Word — close it, then re-run to sync"
+  # Word's lock file is "~$" + the name with as many leading chars dropped as
+  # needed to keep the total length; glob rather than guess the truncation.
+  if compgen -G "$REVIEW_DIR/~\$*.docx" >/dev/null; then
+    echo "  ⚠︎ a Word file is open in $REVIEW_DIR — close it, then re-run to sync"
+    echo "    (skipped the copy so in-progress review edits are not overwritten)"
   else
     cp "$DIST/$NAME.pdf"  "$REVIEW_DIR/$REVIEW_NAME.pdf"
     cp "$DIST/$NAME.docx" "$REVIEW_DIR/$REVIEW_NAME.docx"
