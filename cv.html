@@ -74,6 +74,7 @@
   .lead{ font-weight: 400; color: var(--ink-soft); }
   .yr{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-size:7.8pt; letter-spacing:.02em;
        color: var(--ink-mute); }
+  .yr a{ color: var(--ink-mute); text-decoration: none; border-bottom:.4px solid var(--rule); }
   b, strong{ font-weight: 700; color: var(--ink); font-variant-numeric: lining-nums; }
 
   .kv{ margin-top: 4.4px; break-inside: avoid; page-break-inside: avoid; }
@@ -103,7 +104,7 @@
 <header>
   <h1>Xinyu (Brian) Guo</h1>
   <p class="tagline">Genomic Foundation Models &nbsp;·&nbsp; Cancer Genomics &nbsp;·&nbsp; Scientific AI Agents</p>
-  <p class="contact"><a href="mailto:xinyug@usc.edu">xinyug@usc.edu</a><span class="dot">·</span>(314)&nbsp;680-8961<span class="dot">·</span>Open to relocation<span class="dot">·</span><a href="https://www.xinyuguo.com">xinyuguo.com</a><span class="dot">·</span><a href="https://scholar.google.com/citations?user=F8JBdfEAAAAJ">Google&nbsp;Scholar</a><span class="dot">·</span><a href="https://github.com/Thewhey-Brian">github.com/Thewhey-Brian</a></p>
+  <p class="contact"><a href="mailto:xinyug@usc.edu">xinyug@usc.edu</a><span class="dot">·</span>(314)&nbsp;680-8961<span class="dot">·</span>Open to relocation<span class="dot">·</span><a href="https://www.xinyuguo.com">xinyuguo.com</a><span class="dot">·</span><a href="https://github.com/Thewhey-Brian">github.com/Thewhey-Brian</a></p>
 </header>
 <hr class="rule-top">
 
@@ -133,16 +134,17 @@
     </div>
     <div class="sub">Genomic AI &amp; precision oncology · San Diego (La Jolla), CA</div>
     <ul>
-      <li>Researched DNA foundation models — particularly sequence-to-function models such as AlphaGenome and Enigma —
-          and applied them to an OncoExTra tumor cohort, <b>rescuing 2,554 of 6,087 variants (42%)</b> that conventional
-          snpEff annotation had deprioritized, and ranking them into a wet-lab handoff.</li>
+      <li>Researched DNA foundation models, particularly sequence-to-function models such as AlphaGenome and Enigma.
+          Studied these state-of-the-art models against an OncoExTra tumor cohort, <b>rescuing 2,554 of 6,087 variants
+          (42%)</b> that conventional snpEff annotation had deprioritized.</li>
       <li>Built <b>OncoS2F</b>, a scientific agent that translates natural-language research requests into executable Enigma,
           Evo2, and Carbon workflows, automating sequence-context construction, batch embeddings, feature extraction, model
-          routing, and provenance across <b>13 hosted genomic model endpoints</b>.</li>
-      <li>Built FFPE artifact-risk models on 87,307 raw somatic SNVs reaching <b>ROC-AUC 0.923</b> under leave-one-patient-out
-          evaluation, against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA) on the same cohort; scaled the pipeline to
-          an 18.6M-row SEQC2 benchmark across five callers.</li>
-      <li>Extended the same sequence-to-function models from SNVs to structural rearrangements by building a reusable
+          routing, and provenance across <b>13 hosted genomic model endpoints</b>, through to downstream modeling with
+          task-specific classification heads.</li>
+      <li>Built FFPE artifact-risk detection models over <b>~140 GB</b> of paired fresh-frozen and FFPE sequencing
+          data, reaching <b>ROC-AUC 0.923</b> against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA) on the same
+          cohort, and scaled the pipeline to an 18.6M-row SEQC2 benchmark across five variant callers.</li>
+      <li>Extended sequence-to-function models from SNVs to structural rearrangements by building a reusable
           <b>SV→REF/ALT encoder</b> that renders deletions, duplications, inversions, breakends, and fusions as model-ready
           sequence, and curated an <b>83,048-fusion training corpus</b> across 1,065 cancer types with evidence tiers and
           leakage-safe splits for supervised fusion modeling.</li>
@@ -154,21 +156,22 @@
       <div class="role">Graduate Researcher <span class="org">— University of Southern California</span></div>
       <div class="when">Aug 2022 – Present</div>
     </div>
-    <div class="sub">Ph.D. dissertation research, biological foundation models · Advisor: Dr. Liang Chen</div>
+    <div class="sub">Biological pathology AI/ML modeling · Advisor: Dr. Liang Chen</div>
     <ul>
       <li>Developed a <b>cross-modality foundation model</b> integrating DNA sequence, RNA expression, and spatial
           transcriptomics to identify tissue-specific disease-risk regions, built around explainability so individual genetic
-          variants map to interpretable spatial microenvironments rather than opaque scores.</li>
+          variants map to interpretable spatial microenvironments.</li>
       <li>Designed a <b>self-supervised contrastive learning</b> method with GNN/GAT architectures for spatial
           transcriptomics, enabling integration with large-scale multi-omics cohorts across scRNA-seq, scATAC-seq, and
           spatial modalities for genetic risk evaluation.</li>
       <li>Proposed a fusion architecture using weighted message-passing GNNs and attention to project GWAS/TWAS signals into
           spatial embeddings, bridging population-scale genetics with tissue-resolved measurement.</li>
-      <li>Identified <b>trans-acting NMD-QTLs</b> associated with nonsense-mediated mRNA decay across human tissues, and
-          benchmarked AlphaGenome and Enigma for spatially resolved variant-to-gene perturbation prediction.</li>
-      <li>Benchmarked methods for <b>cell-cycle phase inference</b> from single-cell RNA-seq, establishing which approaches
-          stay reliable across datasets and where they break down — first-author study in
-          <i>Briefings in Bioinformatics</i>.</li>
+      <li>Identified <b>trans-acting NMD-QTLs across 48 human tissues</b>, linking common regulatory variation to
+          nonsense-mediated mRNA decay and exposing a mechanism by which non-coding variants modulate transcript
+          stability and disease risk.</li>
+      <li>Benchmarked methods for <b>cell-cycle phase inference</b> from single-cell RNA-seq, establishing which
+          approaches stay reliable across datasets and where they break down, giving the field a basis for method
+          selection rather than convention.</li>
     </ul>
   </div>
 
@@ -201,8 +204,7 @@
           enrichment, and motif discovery, which became shared infrastructure across several lab projects.</li>
       <li>Elucidated how transcriptional and epigenetic regulators mediate hormone-driven tumor resistance to therapeutics,
           with the chromatin modifier <b>KMT2D</b> and its methylation by SMYD2 as the central axis.</li>
-      <li>Co-authored four resistance-mechanism papers across breast, prostate, and melanoma models in <i>Cell Reports</i>,
-          <i>Oncogene</i>, and <i>Cancer Research</i>.</li>
+      
     </ul>
   </div>
 
@@ -211,13 +213,12 @@
       <div class="role">Research Assistant <span class="org">— Washington University in St. Louis</span></div>
       <div class="when">Jun – Aug 2020</div>
     </div>
-    <div class="sub">Predictive clinical informatics · Advisor: Dr. Andrew Michelson</div>
+    <div class="sub">Predictive clinical informatics · Advisors: Dr. Andrew Michelson &amp; Dr. Philip Payne</div>
     <ul>
-      <li>Built Lasso and logistic-regression models predicting respiratory failure in COVID-19 patients, and
-          <b>implemented them in the Barnes-Jewish Hospital EHR</b> — research code that reached live clinical use during the
+      <li>Built Lasso and logistic-regression models predicting respiratory failure in COVID-19 patients and <b>implemented them in the Barnes-Jewish Hospital EHR</b> — research code that reached live clinical use during the
           pandemic.</li>
-      <li>Enabled early identification of high-risk patients, supporting timely ICU resource deployment under acute bed and
-          ventilator constraints.</li>
+      <li>Enabled early identification of high-risk patients, <b>improving ICU resource allocation</b> under acute bed
+          and ventilator constraints during the peak of the pandemic.</li>
     </ul>
   </div>
 </section>
@@ -225,9 +226,12 @@
 <h2>Selected Projects</h2>
 <section class="entry keep">
   <ul>
-    <li>Engineered and trained a <b>560M-parameter decoder-only LLM from scratch</b> <span class="yr">2025</span> — BPE
-        tokenization, data pipeline, and distributed PyTorch DDP across 8×A100 80GB GPUs, managing the full lifecycle
-        including mixed-precision training and gradient-synchronization tuning for cluster throughput.</li>
+    <li>Trained a <b>560M-parameter decoder-only LLM from scratch</b>
+        <span class="yr">2025 · <a href="https://github.com/Thewhey-Brian/nanochat">github.com/Thewhey-Brian/nanochat</a></span>
+        — built the full pipeline end to end: Rust BPE tokenizer, data loading, base <b>pretraining</b>, midtraining,
+        <b>supervised fine-tuning</b>, and <b>reinforcement learning</b>, with distributed PyTorch DDP across 8 GPUs,
+        mixed precision, and gradient-synchronization tuning for cluster throughput; evaluated on CORE, ARC, MMLU, GSM8K,
+        and HumanEval.</li>
     <li><b>TAL-Mamba</b> <span class="yr">2025 – 2026 · lead developer</span> — state-space Temporal Action Localization
         model for long-horizon sequence understanding (2+ hours), with efficient state management over massive temporal
         datasets, reducing memory usage <b>68%</b> versus Transformer baselines.</li>

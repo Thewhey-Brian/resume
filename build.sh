@@ -31,9 +31,17 @@ echo "✓ built — PDF is $PAGES page(s)"
 echo "  $DIST/$NAME.pdf"
 echo "  $DIST/$NAME.docx"
 
-if [ -n "${CV_OUT:-}" ] && [ -d "$CV_OUT" ]; then
-  cp "$DIST/$NAME.pdf" "$DIST/$NAME.docx" "$CV_OUT/"
-  echo "  copied to $CV_OUT"
+# keep the review copy in sync, under the name used for applications
+REVIEW_DIR="${CV_OUT:-$HOME/Downloads/Xinyu_CV}"
+REVIEW_NAME="${CV_REVIEW_NAME:-Xinyu_Guo_Anthropic_LifeSci}"
+if [ -d "$REVIEW_DIR" ]; then
+  if [ -e "$REVIEW_DIR/~\$${REVIEW_NAME#?}.docx" ]; then
+    echo "  ⚠︎ $REVIEW_NAME.docx is open in Word — close it, then re-run to sync"
+  else
+    cp "$DIST/$NAME.pdf"  "$REVIEW_DIR/$REVIEW_NAME.pdf"
+    cp "$DIST/$NAME.docx" "$REVIEW_DIR/$REVIEW_NAME.docx"
+    echo "  synced → $REVIEW_DIR/$REVIEW_NAME.{pdf,docx}"
+  fi
 fi
 
 if [ "$PAGES" -gt 2 ]; then

@@ -40,6 +40,33 @@ CV_OUT=~/Documents/applications ./build.sh
 
 Requires macOS with Google Chrome (for `--headless --print-to-pdf`) and Python 3.
 
+## Review loop
+
+Word is a good place to *mark up* a CV even if it is a bad place to lay one out. So edits
+made in Word come back into `cv.html` rather than forking from it:
+
+```
+./build.sh                      # HTML → PDF + DOCX
+                                # open the DOCX in Word, turn on Track Changes,
+                                # edit and leave comments
+python review.py <reviewed.docx>          # report what changed → REVIEW.md
+python review.py <reviewed.docx> --apply  # rewrite cv.html with the tracked edits
+./build.sh                      # regenerate both outputs
+```
+
+`review.py` applies **tracked insertions and deletions** automatically wherever a Word
+paragraph maps onto a single HTML fragment — that covers every bullet, context line, and
+publication. It never applies **comments**, since those ask for a judgement rather than a
+substitution; they land in `REVIEW.md` alongside the text they were anchored to.
+
+Anything it cannot map safely — headings, and the composite lines that pack a role title and
+its date into one Word paragraph — is reported under *Needs manual edit* with both the before
+and after text. Nothing is dropped silently.
+
+`build.sh` also copies the outputs to `~/Downloads/Xinyu_CV/` under the name used for
+applications, so the next review round starts from the current version. Override with
+`CV_OUT` and `CV_REVIEW_NAME`.
+
 ## Editing
 
 Almost everything is content, not code. Bullets look like this:
@@ -79,9 +106,11 @@ Then run `./build.sh`.
 ```
 cv.html          content + print CSS — the single source of truth
 make_docx.py     parses cv.html, emits a styled .docx
-build.sh         renders both, reports page count
+review.py        pulls Word tracked-changes + comments back into cv.html
+build.sh         renders both, reports page count, syncs the review copy
 requirements.txt python-docx, pypdf
 dist/            build output (committed, so the PDF is linkable)
+REVIEW.md        generated review report (gitignored)
 ```
 
 ## License
