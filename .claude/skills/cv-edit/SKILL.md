@@ -97,14 +97,6 @@ Landmarks:
   `~/Desktop/Reserach/` or to something the user stated. If a figure is needed and unverified,
   say so and ask rather than estimating.
 
-## Open items to resolve when the user is available
-
-- `~140 GB` in the FFPE bullet is inferred from
-  `ffpe_artifact_filter/docs/data_inventory.md` ("~139 GB, 55 objects"). It excludes the
-  internal 21-patient cohort, so the true figure is higher. The user has not confirmed it.
-- The CV says the LLM was **560M params on 8×A100**; the linked `nanochat` repo README says
-  **1.9B on 8×H100**. One is wrong and the repo is linked from the CV.
-
 ## Committing
 
 The repo is public. Content is already published, so incremental commits are fine.
