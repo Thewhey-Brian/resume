@@ -141,11 +141,13 @@
           Evo2, and Carbon workflows, automating sequence-context construction, batch embeddings, feature extraction, model
           routing, and provenance across <b>13 hosted genomic model endpoints</b>, through to downstream modeling with
           task-specific classification heads.</li>
-      <li>Built FFPE artifact-risk detection models over <b>~140 GB</b> of paired fresh-frozen and FFPE sequencing data, reaching <b>ROC-AUC 0.923</b> against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA) on the same cohort.</li>
-      <li>Extended sequence-to-function models from SNVs to structural rearrangements by building a reusable
-          <b>SV→REF/ALT encoder</b> that renders deletions, duplications, inversions, breakends, and fusions as model-ready
-          sequence, and curated an <b>83,048-fusion training corpus</b> across 1,065 cancer types with evidence tiers and
-          leakage-safe splits for supervised fusion modeling.</li>
+      <li>Built FFPE artifact-risk detection models over ~140 GB of paired fresh-frozen and FFPE sequencing data and
+          evaluated them head-to-head against three published tools on a common cohort, reaching <b>ROC-AUC 0.923</b>
+          against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA).</li>
+      <li>Extended sequence-to-function models from SNVs to structural rearrangements with a reusable
+          SV→REF/ALT encoder that renders deletions, duplications, inversions, breakends, and fusions as model-ready
+          sequence, and curated an <b>83,048-fusion corpus with leakage-safe splits</b> across 1,065 cancer types and
+          evidence tiers for supervised fusion modeling.</li>
     </ul>
   </div>
 
@@ -167,7 +169,9 @@
       <li>Identified <b>trans-acting NMD-QTLs across 48 human tissues</b>, linking common regulatory variation to
           nonsense-mediated mRNA decay and exposing a mechanism by which non-coding variants modulate transcript
           stability and disease risk.</li>
-      <li>Benchmarked methods for <b>cell-cycle phase inference</b> from single-cell RNA-seq, establishing which approaches stay reliable across datasets and where they break down, giving the field a basis for method selection.</li>
+      <li>Designed a <b>cross-dataset benchmark</b> for cell-cycle phase inference from single-cell RNA-seq,
+          defining the evaluation protocol and the failure modes that separate methods which generalize from those
+          that do not.</li>
     </ul>
   </div>
 
@@ -211,10 +215,9 @@
     </div>
     <div class="sub">Predictive clinical informatics · Advisors: Dr. Andrew Michelson &amp; Dr. Philip Payne</div>
     <ul>
-      <li>Built Lasso and logistic-regression models predicting respiratory failure in COVID-19 patients and <b>implemented them in the Barnes-Jewish Hospital EHR</b> — research code that reached live clinical use during the
-          pandemic.</li>
-      <li>Enabled early identification of high-risk patients, <b>improving ICU resource allocation</b> under acute bed
-          and ventilator constraints during the peak of the pandemic.</li>
+      <li>Shipped Lasso and logistic-regression models predicting respiratory failure in COVID-19 patients
+          <b>into the Barnes-Jewish Hospital EHR</b>, where they ran against live patient data during the pandemic peak
+          to flag high-risk patients for ICU triage under acute bed and ventilator constraints.</li>
     </ul>
   </div>
 </section>
@@ -228,12 +231,11 @@
         <b>supervised fine-tuning</b>, and <b>reinforcement learning</b>, with distributed PyTorch DDP across 8 GPUs,
         mixed precision, and gradient-synchronization tuning for cluster throughput; evaluated on CORE, ARC, MMLU, GSM8K,
         and HumanEval.</li>
-    <li><b>TAL-Mamba</b> <span class="yr">2025 – 2026 · lead developer</span> — state-space Temporal Action Localization
-        model for long-horizon sequence understanding (2+ hours), with efficient state management over massive temporal
-        datasets, reducing memory usage <b>68%</b> versus Transformer baselines.</li>
-    <li><b>Track Mamba</b> <span class="yr">2025 – 2026 · principal architect</span> — linear-complexity SSM tracker for
-        real-time small-object tracking on edge hardware, <b>40% smaller</b> and <b>50% faster</b> than TrackNet baselines at
-        higher precision–recall.</li>
+    <li>State-space sequence models for long-horizon and edge deployment
+        <span class="yr">2025 – 2026 · lead developer / principal architect</span> — <b>TAL-Mamba</b>, temporal
+        action localization over 2+ hour sequences with efficient state management, cutting memory 68% versus Transformer
+        baselines; and <b>Track Mamba</b>, a linear-complexity real-time small-object tracker 40% smaller and 50% faster
+        than TrackNet baselines at higher precision–recall.</li>
     <li><b>Legal Patent Copilot</b> <span class="yr">2024</span> — retrieval agent for prior-art discovery over 10M+
         documents using FAISS indexing and fine-tuned reranking layers, cutting search latency <b>42%</b> with improved
         recall.</li>
@@ -270,8 +272,8 @@
 
 <h2>Technical Expertise</h2>
 <section class="entry">
-  <div class="kv"><span class="k">AI / ML</span> &nbsp;<span class="v">Genomic foundation models (AlphaGenome, Enigma, Evo2, Carbon, Borzoi, Enformer, DNABERT) · transformers · state-space models (Mamba) · GNN/GAT · self-supervised &amp; contrastive learning · LLM pretraining · agentic systems &amp; tool use · RAG / vector retrieval · leakage-safe evaluation</span></div>
-  <div class="kv"><span class="k">Comp. Biology</span> &nbsp;<span class="v">Cancer genomics &amp; precision oncology · variant-effect prediction (SNV, SV, fusion) · regulatory genomics &amp; splicing · GWAS/TWAS · single-cell and spatial transcriptomics · RNA-seq / ChIP-seq / ATAC-seq · NGS somatic calling, FFPE artifacts, VCF · OncoKB, CIViC</span></div>
+  <div class="kv"><span class="k">AI / ML</span> &nbsp;<span class="v">Genomic foundation models (AlphaGenome, Enigma, Evo2, Carbon, Borzoi, Enformer, DNABERT) · transformers · state-space models (Mamba) · GNN/GAT · self-supervised &amp; contrastive learning · LLM pretraining · agentic systems &amp; tool use · RAG / vector retrieval · benchmark design &amp; leakage-safe evaluation</span></div>
+  <div class="kv"><span class="k">Comp. Biology</span> &nbsp;<span class="v">Cancer genomics &amp; precision oncology · variant-effect prediction (SNV, SV, fusion) · regulatory genomics &amp; splicing · GWAS/TWAS · single-cell and spatial transcriptomics · RNA-seq / ChIP-seq / ATAC-seq · NGS somatic calling, FFPE artifacts, VCF · Ensembl, NCBI, UniProt, PDB, OncoKB, CIViC</span></div>
   <div class="kv"><span class="k">Engineering</span> &nbsp;<span class="v">Python · R · C++ · SQL · Bash · TypeScript · PyTorch (DDP/FSDP), PyTorch Geometric, Hugging Face, JAX, scikit-learn, CUDA · FastAPI · React · Nextflow / WDL · DuckDB, Parquet · Docker, Git</span></div>
   <div class="kv"><span class="k">Cloud / Scale</span> &nbsp;<span class="v">AWS SageMaker GPU inference · Bedrock · HealthOmics · EC2, ECS, S3 · petabyte-scale sequence data on Linux/HPC · multi-GPU (A100) distributed training</span></div>
 </section>
