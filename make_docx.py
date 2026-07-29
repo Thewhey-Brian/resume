@@ -145,7 +145,7 @@ style_run(p.add_run("GENOMIC FOUNDATION MODELS  ·  CANCER GENOMICS  ·  SCIENTI
 
 p = para(doc, before=3.5, after=0, line=1.0)
 style_run(p.add_run("xinyug@usc.edu   ·   (314) 680-8961   ·   Open to relocation   ·   "
-                    "xinyuguo.com   ·   Google Scholar   ·   github.com/Thewhey-Brian"),
+                    "xinyuguo.com   ·   github.com/Thewhey-Brian"),
           size=8.75, color=INK_SOFT)
 bottom_border(p, color="14171A", sz=10)
 
