@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Xinyu (Brian) Guo — CV</title>
+<style>
+  @page { size: Letter; margin: 0.45in 0.6in 0.4in 0.6in; }
+
+  :root{
+    --ink:      #14171a;
+    --ink-soft: #3a4046;
+    --ink-mute: #717a85;
+    --rule:     #ccd2d8;
+    --accent:   #7a1f2b;
+  }
+
+  html{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body{
+    margin:0;
+    font-family: Charter, "Bitstream Charter", "Source Serif 4", Georgia, serif;
+    font-size: 9.2pt;
+    line-height: 1.36;
+    color: var(--ink);
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  header{ margin: 0; }
+  h1{
+    font-size: 21.5pt; font-weight: 700; letter-spacing: -.012em;
+    margin: 0; line-height: 1; color: var(--ink);
+    font-variant-numeric: normal;
+  }
+  .tagline{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8pt; font-weight: 500; letter-spacing: .085em; white-space: nowrap;
+    text-transform: uppercase; color: var(--accent); margin: 4px 0 0 0;
+  }
+  .contact{ margin: 2.5px 0 0 0; font-size: 8.75pt; color: var(--ink-soft);
+            font-variant-numeric: lining-nums; }
+  .contact a{ color: var(--ink-soft); text-decoration: none; }
+  .contact .dot{ color: var(--rule); padding: 0 5px; }
+  .rule-top{ border:0; border-top: 1.1px solid var(--ink); margin: 7px 0 0 0; }
+
+  h2{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 7.7pt; font-weight: 700; letter-spacing: .165em;
+    text-transform: uppercase; color: var(--ink-soft);
+    margin: 11px 0 0 0; padding-bottom: 2px;
+    border-bottom: .6px solid var(--rule);
+    break-after: avoid; page-break-after: avoid;
+  }
+  .entry{ margin-top: 6.5px; }
+  .entry.keep{ break-inside: auto; }
+  /* never strand an entry header at the foot of a page */
+  .erow, .sub{ break-after: avoid; page-break-after: avoid; }
+
+  .erow{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .role{ font-variant-numeric: lining-nums;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.7pt; font-weight: 600; color: var(--ink);
+  }
+  .role .org{ font-weight: 400; color: var(--ink-soft); }
+  .when{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.2pt; font-weight: 500; color: var(--ink-mute);
+    white-space: nowrap; letter-spacing:.02em; flex: 0 0 auto;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+  .sub{ font-size: 8.7pt; color: var(--ink-mute); font-style: italic; margin-top: 1.2px; }
+
+  ul{ margin: 4px 0 0 0; padding-left: 14px; list-style-type: "–"; }
+  ul > li{ padding-left: 3.5px; margin-top: 3.3px; break-inside: avoid; page-break-inside: avoid; }
+  ul > li::marker{ color: #a9b1ba; }
+  .lead{ font-weight: 400; color: var(--ink-soft); }
+  .yr{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-size:7.8pt; letter-spacing:.02em;
+       color: var(--ink-mute); }
+  b, strong{ font-weight: 700; color: var(--ink); font-variant-numeric: lining-nums; }
+
+  .kv{ margin-top: 4.4px; break-inside: avoid; page-break-inside: avoid; }
+  .kv .k{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 7.8pt; font-weight: 700; letter-spacing:.05em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .kv .v{ color: var(--ink-soft); }
+
+  .edu{ display:flex; justify-content:space-between; align-items:baseline; gap:14px; margin-top: 5px; }
+  .edu .d{ flex: 1 1 auto; }
+  .edu .d b{ font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-size:9.4pt; font-weight:600; }
+  .edu .d span{ color: var(--ink-soft); font-size: 8.85pt; font-variant-numeric: lining-nums; }
+
+  .cites{ margin-top: 3.5px; font-size: 8.7pt; color: var(--ink-soft); }
+  .cites a{ color: var(--ink-soft); }
+  ol.pubs{ margin: 3px 0 0 0; padding-left: 14px; font-size: 8.95pt; }
+  ol.pubs li{ margin-top: 3.4px; break-inside: avoid; page-break-inside: avoid; }
+  ol.pubs li::marker{ color: var(--ink-mute); font-family:"Helvetica Neue",Helvetica,sans-serif; font-size:7.6pt; }
+  ol.pubs .venue{ font-style: italic; color: var(--ink-soft); }
+  .me{ text-decoration: underline; text-decoration-thickness:.5px; text-underline-offset:1.6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Xinyu (Brian) Guo</h1>
+  <p class="tagline">Genomic Foundation Models &nbsp;·&nbsp; Cancer Genomics &nbsp;·&nbsp; Scientific AI Agents</p>
+  <p class="contact"><a href="mailto:xinyug@usc.edu">xinyug@usc.edu</a><span class="dot">·</span>(314)&nbsp;680-8961<span class="dot">·</span>Open to relocation<span class="dot">·</span><a href="https://www.xinyuguo.com">xinyuguo.com</a><span class="dot">·</span><a href="https://scholar.google.com/citations?user=F8JBdfEAAAAJ">Google&nbsp;Scholar</a><span class="dot">·</span><a href="https://github.com/Thewhey-Brian">github.com/Thewhey-Brian</a></p>
+</header>
+<hr class="rule-top">
+
+<h2>Education</h2>
+<section>
+  <div class="edu">
+    <div class="d"><b>Ph.D., Computational Biology &amp; Bioinformatics</b><span> &nbsp;University of Southern California · 3.95/4.0 · <i>Viterbi Fellow</i></span></div>
+    <div class="when">Aug 2022 – 2026</div>
+  </div>
+  <div class="edu">
+    <div class="d"><b>M.S., Biostatistics</b><span> &nbsp;Johns Hopkins University · 3.97/4.0 · <i>Delta Omega Honor Society</i></span></div>
+    <div class="when">Aug 2020 – May 2022</div>
+  </div>
+  <div class="edu">
+    <div class="d"><b>B.A., Mathematics &amp; Computer Science</b><span> &nbsp;Washington University in St. Louis · 3.89/4.0 · <i>Cum Laude</i></span></div>
+    <div class="when">Aug 2018 – May 2020</div>
+  </div>
+</section>
+
+<h2>Experience</h2>
+<section>
+
+  <div class="entry">
+    <div class="erow">
+      <div class="role">AI Research Scientist Intern <span class="org">— Abbott Cancer Diagnostics (formerly Exact Sciences)</span></div>
+      <div class="when">Summer 2026</div>
+    </div>
+    <div class="sub">Genomic AI &amp; precision oncology · San Diego (La Jolla), CA</div>
+    <ul>
+      <li>Researched DNA foundation models — particularly sequence-to-function models such as AlphaGenome and Enigma —
+          and applied them to an OncoExTra tumor cohort, <b>rescuing 2,554 of 6,087 variants (42%)</b> that conventional
+          snpEff annotation had deprioritized, and ranking them into a wet-lab handoff.</li>
+      <li>Built <b>OncoS2F</b>, a scientific agent that translates natural-language research requests into executable Enigma,
+          Evo2, and Carbon workflows, automating sequence-context construction, batch embeddings, feature extraction, model
+          routing, and provenance across <b>13 hosted genomic model endpoints</b>.</li>
+      <li>Built FFPE artifact-risk models on 87,307 raw somatic SNVs reaching <b>ROC-AUC 0.923</b> under leave-one-patient-out
+          evaluation, against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA) on the same cohort; scaled the pipeline to
+          an 18.6M-row SEQC2 benchmark across five callers.</li>
+      <li>Extended the same sequence-to-function models from SNVs to structural rearrangements by building a reusable
+          <b>SV→REF/ALT encoder</b> that renders deletions, duplications, inversions, breakends, and fusions as model-ready
+          sequence, and curated an <b>83,048-fusion training corpus</b> across 1,065 cancer types with evidence tiers and
+          leakage-safe splits for supervised fusion modeling.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="erow">
+      <div class="role">Graduate Researcher <span class="org">— University of Southern California</span></div>
+      <div class="when">Aug 2022 – Present</div>
+    </div>
+    <div class="sub">Ph.D. dissertation research, biological foundation models · Advisor: Dr. Liang Chen</div>
+    <ul>
+      <li>Developed a <b>cross-modality foundation model</b> integrating DNA sequence, RNA expression, and spatial
+          transcriptomics to identify tissue-specific disease-risk regions, built around explainability so individual genetic
+          variants map to interpretable spatial microenvironments rather than opaque scores.</li>
+      <li>Designed a <b>self-supervised contrastive learning</b> method with GNN/GAT architectures for spatial
+          transcriptomics, enabling integration with large-scale multi-omics cohorts across scRNA-seq, scATAC-seq, and
+          spatial modalities for genetic risk evaluation.</li>
+      <li>Proposed a fusion architecture using weighted message-passing GNNs and attention to project GWAS/TWAS signals into
+          spatial embeddings, bridging population-scale genetics with tissue-resolved measurement.</li>
+      <li>Identified <b>trans-acting NMD-QTLs</b> associated with nonsense-mediated mRNA decay across human tissues, and
+          benchmarked AlphaGenome and Enigma for spatially resolved variant-to-gene perturbation prediction.</li>
+      <li>Benchmarked methods for <b>cell-cycle phase inference</b> from single-cell RNA-seq, establishing which approaches
+          stay reliable across datasets and where they break down — first-author study in
+          <i>Briefings in Bioinformatics</i>.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="erow">
+      <div class="role">Graduate Researcher <span class="org">— Johns Hopkins University</span></div>
+      <div class="when">Oct 2020 – Aug 2022</div>
+    </div>
+    <div class="sub">Statistical genetics · Advisors: Dr. Nilanjan Chatterjee &amp; Dr. Diptavo Dutta</div>
+    <ul>
+      <li>Developed <b>CSTWAS</b>, a subset-based cross-tissue meta-analysis method for transcriptome-wide association
+          studies that raises power over standard single- and multi-tissue tests while identifying which tissues are actually
+          "active" for a gene–trait signal, improving both power and interpretability.</li>
+      <li>Performed transcriptome- and proteome-wide association studies at bulk and single-cell resolution to identify genes
+          linked to <b>renal cell carcinoma</b>, and contributed to follow-on work partitioning polygenic risk scores to
+          identify cancer-related proteins.</li>
+      <li>Modeled GWAS summary statistics jointly with single-cell ATAC-seq to interpret disease etiology at cellular rather
+          than tissue resolution.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="erow">
+      <div class="role">Graduate Researcher <span class="org">— Johns Hopkins University</span></div>
+      <div class="when">Feb 2021 – Aug 2022</div>
+    </div>
+    <div class="sub">Multi-omics &amp; cancer therapy resistance · Advisors: Dr. Hongkai Ji &amp; Dr. Eneda Toska</div>
+    <ul>
+      <li>Built a comprehensive <b>RNA-seq, ChIP-seq, and ATAC-seq pipeline</b> supporting differential analysis, gene-set
+          enrichment, and motif discovery, which became shared infrastructure across several lab projects.</li>
+      <li>Elucidated how transcriptional and epigenetic regulators mediate hormone-driven tumor resistance to therapeutics,
+          with the chromatin modifier <b>KMT2D</b> and its methylation by SMYD2 as the central axis.</li>
+      <li>Co-authored four resistance-mechanism papers across breast, prostate, and melanoma models in <i>Cell Reports</i>,
+          <i>Oncogene</i>, and <i>Cancer Research</i>.</li>
+    </ul>
+  </div>
+
+  <div class="entry keep">
+    <div class="erow">
+      <div class="role">Research Assistant <span class="org">— Washington University in St. Louis</span></div>
+      <div class="when">Jun – Aug 2020</div>
+    </div>
+    <div class="sub">Predictive clinical informatics · Advisor: Dr. Andrew Michelson</div>
+    <ul>
+      <li>Built Lasso and logistic-regression models predicting respiratory failure in COVID-19 patients, and
+          <b>implemented them in the Barnes-Jewish Hospital EHR</b> — research code that reached live clinical use during the
+          pandemic.</li>
+      <li>Enabled early identification of high-risk patients, supporting timely ICU resource deployment under acute bed and
+          ventilator constraints.</li>
+    </ul>
+  </div>
+</section>
+
+<h2>Selected Projects</h2>
+<section class="entry keep">
+  <ul>
+    <li>Engineered and trained a <b>560M-parameter decoder-only LLM from scratch</b> <span class="yr">2025</span> — BPE
+        tokenization, data pipeline, and distributed PyTorch DDP across 8×A100 80GB GPUs, managing the full lifecycle
+        including mixed-precision training and gradient-synchronization tuning for cluster throughput.</li>
+    <li><b>TAL-Mamba</b> <span class="yr">2025 – 2026 · lead developer</span> — state-space Temporal Action Localization
+        model for long-horizon sequence understanding (2+ hours), with efficient state management over massive temporal
+        datasets, reducing memory usage <b>68%</b> versus Transformer baselines.</li>
+    <li><b>Track Mamba</b> <span class="yr">2025 – 2026 · principal architect</span> — linear-complexity SSM tracker for
+        real-time small-object tracking on edge hardware, <b>40% smaller</b> and <b>50% faster</b> than TrackNet baselines at
+        higher precision–recall.</li>
+    <li><b>Legal Patent Copilot</b> <span class="yr">2024</span> — retrieval agent for prior-art discovery over 10M+
+        documents using FAISS indexing and fine-tuned reranking layers, cutting search latency <b>42%</b> with improved
+        recall.</li>
+  </ul>
+</section>
+
+<h2>Selected Publications</h2>
+<section class="entry">
+  <ol class="pubs">
+    <li><span class="me">Guo, X.</span>, Chen, L. From G1 to M: a comparative study of methods for identifying cell
+        cycle phases. <span class="venue">Briefings in Bioinformatics</span> (2024).</li>
+    <li><span class="me">Guo, X.</span>, Chatterjee, N., Dutta, D. Subset-based method for cross-tissue
+        transcriptome-wide association studies improves power and interpretability.
+        <span class="venue">Human Genetics and Genomics Advances</span> (2024).</li>
+    <li>Dutta, D., <span class="me">Guo, X.</span>, Winter, T.D., et al. Transcriptome- and proteome-wide association studies
+        identify genes associated with renal cell carcinoma.
+        <span class="venue">The American Journal of Human Genetics</span> (2024).</li>
+    <li>Bianchi, A., De Castro Silva, I., … <span class="me">Guo, X.</span>, et al. Cell-autonomous Cxcl1 sustains tolerogenic
+        circuitries and stromal inflammation via neutrophil-derived TNF in pancreatic cancer.
+        <span class="venue">Cancer Discovery</span> (2023).</li>
+    <li>Blawski, R., Vokshi, B.H., <span class="me">Guo, X.</span>, et al. Methylation of the chromatin modifier KMT2D by
+        SMYD2 contributes to therapeutic response in hormone-dependent breast cancer.
+        <span class="venue">Cell Reports</span> (2024).</li>
+    <li>Kittane, S., Ladewig, E., … <span class="me">Guo, X.</span>, et al. The histone methyltransferase KMT2D mediates
+        subtype-specific transcriptional regulation, lineage plasticity, and therapeutic response in castration-resistant
+        prostate cancer. <span class="venue">Cancer Research</span> (2024, 2025).</li>
+    <li>Jagirdar, K., Portuallo, M.E., … <span class="me">Guo, X.</span>, et al. ERK hyperactivation as a unified mechanism of
+        escape in intrinsic and acquired CDK4/6-inhibitor resistance in acral lentiginous melanoma.
+        <span class="venue">Oncogene</span> (2024).</li>
+    <li>Dutta, D., Zhang, J., <span class="me">Guo, X.</span>, et al. Leveraging and partitioning polygenic risk scores to
+        identify cancer-related proteins. <span class="venue">medRxiv</span> (2025, preprint).</li>
+  </ol>
+</section>
+
+<h2>Technical Expertise</h2>
+<section class="entry">
+  <div class="kv"><span class="k">AI / ML</span> &nbsp;<span class="v">Genomic foundation models (AlphaGenome, Enigma, Evo2, Carbon, Borzoi, Enformer, DNABERT) · transformers · state-space models (Mamba) · GNN/GAT · self-supervised &amp; contrastive learning · LLM pretraining · agentic systems &amp; tool use · RAG / vector retrieval · leakage-safe evaluation</span></div>
+  <div class="kv"><span class="k">Comp. Biology</span> &nbsp;<span class="v">Cancer genomics &amp; precision oncology · variant-effect prediction (SNV, SV, fusion) · regulatory genomics &amp; splicing · GWAS/TWAS · single-cell and spatial transcriptomics · RNA-seq / ChIP-seq / ATAC-seq · NGS somatic calling, FFPE artifacts, VCF · OncoKB, CIViC</span></div>
+  <div class="kv"><span class="k">Engineering</span> &nbsp;<span class="v">Python · R · C++ · SQL · Bash · TypeScript · PyTorch (DDP/FSDP), PyTorch Geometric, Hugging Face, JAX, scikit-learn, CUDA · FastAPI · React · Nextflow / WDL · DuckDB, Parquet · Docker, Git</span></div>
+  <div class="kv"><span class="k">Cloud / Scale</span> &nbsp;<span class="v">AWS SageMaker GPU inference · Bedrock · HealthOmics · EC2, ECS, S3 · petabyte-scale sequence data on Linux/HPC · multi-GPU (A100) distributed training</span></div>
+</section>
+
+</body>
+</html>
