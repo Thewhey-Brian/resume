@@ -144,10 +144,10 @@
       <li>Built FFPE artifact-risk detection models over ~140 GB of paired fresh-frozen and FFPE sequencing data and
           evaluated them head-to-head against three published tools on a common cohort, reaching <b>ROC-AUC 0.923</b>
           against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA).</li>
-      <li>Extended sequence-to-function models from SNVs to structural rearrangements with a reusable
-          SV→REF/ALT encoder that renders deletions, duplications, inversions, breakends, and fusions as model-ready
-          sequence, and curated an <b>83,048-fusion corpus with leakage-safe splits</b> across 1,065 cancer types and
-          evidence tiers for supervised fusion modeling.</li>
+      <li>Trained multiple-instance learning models on UNI2-h pathology foundation model embeddings over 2,099
+          whole-slide images from 1,485 patients, predicting ER (<b>AUROC 0.890</b>), TNBC (0.893), and HRD-high (0.790)
+          from H&amp;E under 5-fold × 3-repeat cross-validation, with every leave-institution-out drop ≤ 0.03; benchmarked
+          gated-attention against mean-pooling aggregation to settle where the added complexity pays.</li>
     </ul>
   </div>
 
