@@ -144,7 +144,7 @@ style_run(p.add_run("GENOMIC FOUNDATION MODELS  ·  CANCER GENOMICS  ·  SCIENTI
           size=8, font=SANS, color=ACCENT, bold=True, spacing=.65)
 
 p = para(doc, before=3.5, after=0, line=1.0)
-style_run(p.add_run("xinyug@usc.edu   ·   (314) 680-8961   ·   Open to relocation   ·   "
+style_run(p.add_run("xinyu.guo@yale.edu   ·   (314) 680-8961   ·   Open to relocation   ·   "
                     "xinyuguo.com   ·   github.com/Thewhey-Brian"),
           size=8.75, color=INK_SOFT)
 bottom_border(p, color="14171A", sz=10)
@@ -153,7 +153,7 @@ bottom_border(p, color="14171A", sz=10)
 section_head(doc, "Education")
 for degree, rest, when in [
     ("Ph.D., Computational Biology & Bioinformatics",
-     "  University of Southern California · 3.95/4.0 · Viterbi Fellow", "Aug 2022 – 2026"),
+     "  University of Southern California · 3.95/4.0 · Viterbi Fellow", "2022 – 2026"),
     ("M.S., Biostatistics",
      "  Johns Hopkins University · 3.97/4.0 · Delta Omega Honor Society", "Aug 2020 – May 2022"),
     ("B.A., Mathematics & Computer Science",
