@@ -103,7 +103,7 @@
 
 <header>
   <h1>Xinyu (Brian) Guo</h1>
-  <p class="tagline">Genomic Foundation Models &nbsp;·&nbsp; Cancer Genomics &nbsp;·&nbsp; Scientific AI Agents</p>
+  <p class="tagline">Foundation Models &nbsp;·&nbsp; Generative Modeling &nbsp;·&nbsp; AI for Science</p>
   <p class="contact"><a href="mailto:xinyu.guo@yale.edu">xinyu.guo@yale.edu</a><span class="dot">·</span>(314)&nbsp;680-8961<span class="dot">·</span>Open to relocation<span class="dot">·</span><a href="https://www.xinyuguo.com">xinyuguo.com</a><span class="dot">·</span><a href="https://github.com/Thewhey-Brian">github.com/Thewhey-Brian</a></p>
 </header>
 <hr class="rule-top">
@@ -132,10 +132,14 @@
       <div class="role">Postdoctoral Associate <span class="org">— Yale University</span></div>
       <div class="when">Sep 2026 – Present</div>
     </div>
-    <div class="sub">AI for biology &amp; biological foundation models · Advisor: Dr. Lucila Ohno-Machado · New Haven, CT</div>
+    <div class="sub">Foundation models &amp; generative modeling · Advisor: Dr. Lucila Ohno-Machado · New Haven, CT</div>
     <ul>
-      <li>Develop and evaluate <b>biological foundation models</b> spanning DNA, RNA, and single-cell modalities,
-          focusing on how pretrained representations transfer to variant-effect, regulatory, and disease-risk tasks.</li>
+      <li>Develop and train <b>generative flow-matching and diffusion models</b> that forecast how high-dimensional
+          cell populations evolve over time; evaluate generalization to held-out time points and conditions.</li>
+      <li>Fine-tune and evaluate <b>sequence foundation models</b> on long-context genomic data, including
+          parameter-efficient (LoRA) adaptation and multi-GPU training on a Slurm cluster.</li>
+      <li>Build <b>perturbation-response prediction models</b> for the Arc Institute Virtual Cell Challenge 2026;
+          design leakage-safe, held-out-context benchmarks to measure out-of-distribution generalization.</li>
     </ul>
   </div>
 
@@ -146,20 +150,14 @@
     </div>
     <div class="sub">Genomic AI &amp; precision oncology · San Diego (La Jolla), CA</div>
     <ul>
-      <li>Researched DNA foundation models, particularly sequence-to-function models such as AlphaGenome and Enigma.
-          Studied these state-of-the-art models against an OncoExTra tumor cohort, <b>rescuing 2,554 of 6,087 variants
-          (42%)</b> that conventional snpEff annotation had deprioritized.</li>
-      <li>Built <b>OncoS2F</b>, a scientific agent that translates natural-language research requests into executable Enigma,
-          Evo2, and Carbon workflows, automating sequence-context construction, batch embeddings, feature extraction, model
-          routing, and provenance across <b>13 hosted genomic model endpoints</b>, through to downstream modeling with
-          task-specific classification heads.</li>
-      <li>Built FFPE artifact-risk detection models over ~140 GB of paired fresh-frozen and FFPE sequencing data and
-          evaluated them head-to-head against three published tools on a common cohort, reaching <b>ROC-AUC 0.923</b>
-          against 0.677 (FFPErase), 0.517 (FFPolish), and 0.509 (FIFA).</li>
-      <li>Trained multiple-instance learning models on UNI2-h pathology foundation model embeddings over 2,099
-          whole-slide images from 1,485 patients, predicting ER (<b>AUROC 0.890</b>), TNBC (0.893), and HRD-high (0.790)
-          from H&amp;E under 5-fold × 3-repeat cross-validation, with every leave-institution-out drop ≤ 0.03; benchmarked
-          gated-attention against mean-pooling aggregation to settle where the added complexity pays.</li>
+      <li>Evaluated sequence-to-function foundation models (AlphaGenome, Enigma) on an OncoExTra tumor cohort,
+          expanding the reviewable evidence space by <b>2,554 of 6,087 variants (42%)</b> that snpEff had deprioritized.</li>
+      <li>Built <b>OncoS2F</b>, an agent that turns natural-language requests into Enigma, Evo2, and Carbon workflows
+          across <b>13 hosted genomic model endpoints</b>, from sequence construction through task-specific heads.</li>
+      <li>Trained FFPE artifact-risk models on ~140 GB of paired fresh-frozen/FFPE sequencing, reaching
+          <b>ROC-AUC 0.923</b> versus evaluated implementations of FFPErase (0.677), FFPolish (0.517), and FIFA (0.509) on the same cohort.</li>
+      <li>Trained multiple-instance models on UNI2-h pathology embeddings over 2,099 whole-slide images, predicting
+          ER (<b>AUROC 0.890</b>), TNBC (0.893), and HRD-high (0.790) with every leave-institution-out drop ≤ 0.03.</li>
     </ul>
   </div>
 
@@ -168,19 +166,14 @@
       <div class="role">Graduate Researcher <span class="org">— University of Southern California</span></div>
       <div class="when">Aug 2022 – May 2026</div>
     </div>
-    <div class="sub">Biological pathology AI/ML modeling · Advisor: Dr. Liang Chen</div>
+    <div class="sub">Multi-modal representation learning · Advisor: Dr. Liang Chen</div>
     <ul>
       <li>Developed a <b>cross-modality foundation model</b> integrating DNA sequence, RNA expression, and spatial
-          transcriptomics to identify tissue-specific disease-risk regions, built around explainability so individual genetic
-          variants map to interpretable spatial microenvironments.</li>
-      <li>Designed a <b>self-supervised contrastive learning</b> method with GNN/GAT architectures for spatial
-          transcriptomics, enabling integration with large-scale multi-omics cohorts across scRNA-seq, scATAC-seq, and
-          spatial modalities for genetic risk evaluation.</li>
-      <li>Proposed a fusion architecture using weighted message-passing GNNs and attention to project GWAS/TWAS signals into
-          spatial embeddings, bridging population-scale genetics with tissue-resolved measurement.</li>
-      <li>Identified <b>trans-acting NMD-QTLs across 48 human tissues</b>, linking common regulatory variation to
-          nonsense-mediated mRNA decay and exposing a mechanism by which non-coding variants modulate transcript
-          stability and disease risk.</li>
+          data, built for interpretability so individual inputs map to explainable spatial structure.</li>
+      <li>Designed <b>self-supervised contrastive</b> GNN/GAT models with attention-based fusion to align
+          population-scale genetic signals with spatial embeddings across single-cell modalities.</li>
+      <li>Identified <b>trans-acting NMD-QTLs across 48 human tissues</b>, linking regulatory variation to
+          nonsense-mediated mRNA decay and transcript stability.</li>
     </ul>
   </div>
 
@@ -191,14 +184,10 @@
     </div>
     <div class="sub">Statistical genetics · Advisors: Dr. Nilanjan Chatterjee &amp; Dr. Diptavo Dutta</div>
     <ul>
-      <li>Developed <b>CSTWAS</b>, a subset-based cross-tissue meta-analysis method for transcriptome-wide association
-          studies that raises power over standard single- and multi-tissue tests while identifying which tissues are actually
-          "active" for a gene–trait signal, improving both power and interpretability.</li>
-      <li>Performed transcriptome- and proteome-wide association studies at bulk and single-cell resolution to identify genes
-          linked to <b>renal cell carcinoma</b>, and contributed to follow-on work partitioning polygenic risk scores to
-          identify cancer-related proteins.</li>
-      <li>Modeled GWAS summary statistics jointly with single-cell ATAC-seq to interpret disease etiology at cellular rather
-          than tissue resolution.</li>
+      <li>Developed <b>CSTWAS</b>, a subset-based cross-tissue TWAS method that raises power over single- and
+          multi-tissue tests while identifying which tissues drive each gene–trait signal.</li>
+      <li>Ran transcriptome- and proteome-wide association studies at bulk and single-cell resolution, identifying
+          genes linked to <b>renal cell carcinoma</b>.</li>
     </ul>
   </div>
 
@@ -209,11 +198,8 @@
     </div>
     <div class="sub">Multi-omics &amp; cancer therapy resistance · Advisors: Dr. Hongkai Ji &amp; Dr. Eneda Toska</div>
     <ul>
-      <li>Built a comprehensive <b>RNA-seq, ChIP-seq, and ATAC-seq pipeline</b> supporting differential analysis, gene-set
-          enrichment, and motif discovery, which became shared infrastructure across several lab projects.</li>
-      <li>Elucidated how transcriptional and epigenetic regulators mediate hormone-driven tumor resistance to therapeutics,
-          with the chromatin modifier <b>KMT2D</b> and its methylation by SMYD2 as the central axis.</li>
-      
+      <li>Built the lab's shared <b>RNA-seq, ChIP-seq, and ATAC-seq pipeline</b> and used it to show how the chromatin
+          modifier <b>KMT2D</b> and its methylation by SMYD2 mediate hormone-driven therapy resistance.</li>
     </ul>
   </div>
 
@@ -224,9 +210,8 @@
     </div>
     <div class="sub">Predictive clinical informatics · Advisors: Dr. Andrew Michelson &amp; Dr. Philip Payne</div>
     <ul>
-      <li>Shipped Lasso and logistic-regression models predicting respiratory failure in COVID-19 patients
-          <b>into the Barnes-Jewish Hospital EHR</b>, where they ran against live patient data during the pandemic peak
-          to flag high-risk patients for ICU triage under acute bed and ventilator constraints.</li>
+      <li>Shipped respiratory-failure prediction models for COVID-19 patients <b>into the Barnes-Jewish Hospital
+          EHR</b>, running on live patient data to support ICU triage.</li>
     </ul>
   </div>
 </section>
@@ -234,26 +219,20 @@
 <h2>Selected Projects</h2>
 <section class="entry keep">
   <ul>
-    <li>Benchmarked <b>AlphaGenome</b> against atrial-fibrillation TWAS
-        <span class="yr">2025 · <a href="https://www.xinyuguo.com/projects/ag-twas-alphagenome">xinyuguo.com/projects/ag-twas-alphagenome</a></span>
-        — scored sequence-model predictions on 858 gene–tissue pairs and 10,120 fine-mapped variant–gene–tissue
-        triplets across 10 GTEx tissues; chromatin tracks enriched for causal variants (ATAC 1.18×, P &lt; 10⁻⁴)
-        while expression predictions held only 55–60% sign accuracy, mapping where sequence models can and cannot
-        substitute for genotype-trained methods.</li>
     <li>Trained a <b>560M-parameter decoder-only LLM from scratch</b>
         <span class="yr">2025 · <a href="https://www.xinyuguo.com/projects/nanochat-llm-training">xinyuguo.com/projects/nanochat-llm-training</a></span>
-        — built the full pipeline end to end: Rust BPE tokenizer, data loading, base <b>pretraining</b>, midtraining,
-        <b>supervised fine-tuning</b>, and <b>reinforcement learning</b>, with distributed PyTorch DDP across 8 GPUs,
-        mixed precision, and gradient-synchronization tuning for cluster throughput; evaluated on CORE, ARC, MMLU, GSM8K,
-        and HumanEval.</li>
-    <li>State-space sequence models for long-horizon and edge deployment
-        <span class="yr">2025 – 2026 · lead developer / principal architect</span> — <b>TAL-Mamba</b>, temporal
-        action localization over 2+ hour sequences with efficient state management, cutting memory 68% versus Transformer
-        baselines; and <b>Track Mamba</b>, a linear-complexity real-time small-object tracker 40% smaller and 50% faster
-        than TrackNet baselines at higher precision–recall.</li>
+        — Rust BPE tokenizer, pretraining, supervised fine-tuning, and reinforcement learning with PyTorch DDP
+        across 8 GPUs; evaluated on CORE, ARC, MMLU, GSM8K, and HumanEval.</li>
+    <li>State-space sequence models <span class="yr">2025 – 2026 · lead developer</span> — <b>TAL-Mamba</b>, temporal
+        action localization over 2+ hour sequences at 68% less memory than Transformer baselines; <b>Track Mamba</b>,
+        a linear-complexity real-time small-object tracker 40% smaller and 50% faster than TrackNet baselines.</li>
     <li><b>Legal Patent Copilot</b> <span class="yr">2024</span> — retrieval agent for prior-art discovery over 10M+
         documents using FAISS indexing and fine-tuned reranking layers, cutting search latency <b>42%</b> with improved
         recall.</li>
+    <li>Benchmarked <b>AlphaGenome</b> against atrial-fibrillation TWAS
+        <span class="yr">2025 · <a href="https://www.xinyuguo.com/projects/ag-twas-alphagenome">xinyuguo.com/projects/ag-twas-alphagenome</a></span>
+        — 10,120 fine-mapped variant–gene–tissue triplets across 10 GTEx tissues; chromatin tracks enriched for causal
+        variants (ATAC 1.18×, P &lt; 10⁻⁴) while expression predictions held only 55–60% sign accuracy.</li>
   </ul>
 </section>
 
@@ -287,10 +266,9 @@
 
 <h2>Technical Expertise</h2>
 <section class="entry">
-  <div class="kv"><span class="k">AI / ML</span> &nbsp;<span class="v">Genomic foundation models (AlphaGenome, Enigma, Evo2, Carbon, Borzoi, Enformer, DNABERT) · transformers · state-space models (Mamba) · GNN/GAT · self-supervised &amp; contrastive learning · LLM pretraining · agentic systems &amp; tool use · RAG / vector retrieval · benchmark design &amp; leakage-safe evaluation</span></div>
-  <div class="kv"><span class="k">Comp. Biology</span> &nbsp;<span class="v">Cancer genomics &amp; precision oncology · variant-effect prediction (SNV, SV, fusion) · regulatory genomics &amp; splicing · GWAS/TWAS · single-cell and spatial transcriptomics · RNA-seq / ChIP-seq / ATAC-seq · NGS somatic calling, FFPE artifacts, VCF · Ensembl, NCBI, UniProt, PDB, OncoKB, CIViC</span></div>
-  <div class="kv"><span class="k">Engineering</span> &nbsp;<span class="v">Python · R · C++ · SQL · Bash · TypeScript · PyTorch (DDP/FSDP), PyG, Hugging Face, JAX, scikit-learn, CUDA · FastAPI · React · Nextflow / WDL · DuckDB · Docker, Git</span></div>
-  <div class="kv"><span class="k">Cloud / Scale</span> &nbsp;<span class="v">AWS (SageMaker, Bedrock, HealthOmics, EC2/ECS/S3) · petabyte-scale data on HPC · multi-GPU training</span></div>
+  <div class="kv"><span class="k">ML Research</span> &nbsp;<span class="v">Foundation-model pretraining &amp; fine-tuning (LoRA / full) · generative models (flow matching, diffusion, autoregressive LLMs) · transformers, state-space models (Mamba), GNNs · self-supervised &amp; contrastive learning · reinforcement learning · agentic systems &amp; tool use · RAG / vector retrieval · benchmark design &amp; leakage-safe evaluation</span></div>
+  <div class="kv"><span class="k">Engineering</span> &nbsp;<span class="v">Python · C++ · SQL · Bash · TypeScript · R · PyTorch (DDP/FSDP) · JAX · Hugging Face · PyG · CUDA · distributed multi-GPU training on Slurm HPC and AWS (SageMaker, Bedrock, EC2, S3) · FastAPI · Docker · Git</span></div>
+  <div class="kv"><span class="k">AI for Science</span> &nbsp;<span class="v">Genomic, single-cell, and pathology foundation models (AlphaGenome, Enigma, Evo 2, Borzoi, Enformer, scGPT, Geneformer, UNI) · variant-effect prediction · single-cell &amp; spatial omics · statistical genetics</span></div>
 </section>
 
 </body>

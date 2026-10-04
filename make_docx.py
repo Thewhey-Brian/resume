@@ -43,17 +43,25 @@ def runs_of(html):
     """Parse a fragment into styled runs, tracking nesting properly."""
     out, pos = [], 0
     bold = ital = und = 0
+    stack = []
     for m in TAG.finditer(html):
         text = html[pos:m.start()]
         if text:
             out.append((unesc(text), bold > 0, ital > 0, und > 0))
         closing, tag, attrs = m.group(1), m.group(2).lower(), m.group(3)
-        cls = re.search(r'class="([^"]*)"', attrs)
-        cls = cls.group(1).split() if cls else []
-        d = -1 if closing else 1
-        if tag in ("b", "strong") or "lead" in cls:      bold += d
-        if tag in ("i", "em") or "venue" in cls or "yr" in cls: ital += d
-        if "me" in cls:                                  und += d
+        if closing:
+            for i in range(len(stack) - 1, -1, -1):
+                if stack[i][0] == tag:
+                    _, bold, ital, und = stack[i]
+                    del stack[i:]
+                    break
+        else:
+            stack.append((tag, bold, ital, und))
+            cls = re.search(r'class="([^"]*)"', attrs)
+            cls = cls.group(1).split() if cls else []
+            if tag in ("b", "strong") or "lead" in cls: bold += 1
+            if tag in ("i", "em") or "venue" in cls or "yr" in cls: ital += 1
+            if "me" in cls: und += 1
         pos = m.end()
     if html[pos:]:
         out.append((unesc(html[pos:]), bold > 0, ital > 0, und > 0))
@@ -140,7 +148,7 @@ p = para(doc, after=0, line=1.0)
 style_run(p.add_run("Xinyu (Brian) Guo"), size=22.5, font=SERIF, color=INK, bold=True)
 
 p = para(doc, before=4, after=0, line=1.0)
-style_run(p.add_run("GENOMIC FOUNDATION MODELS  ·  CANCER GENOMICS  ·  SCIENTIFIC AI AGENTS"),
+style_run(p.add_run("FOUNDATION MODELS  ·  GENERATIVE MODELING  ·  AI FOR SCIENCE"),
           size=8, font=SANS, color=ACCENT, bold=True, spacing=.65)
 
 p = para(doc, before=3.5, after=0, line=1.0)
